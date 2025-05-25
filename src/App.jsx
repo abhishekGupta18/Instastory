@@ -24,7 +24,7 @@ function App() {
     if (currentStoryIndex < currentUser.stories.length - 1) {
       setCurrentStoryIndex(prev => prev + 1);
     } else {
-      // Move to next user's first story
+
       if (currentUserIndex < stories.length - 1) {
         setCurrentUserIndex(prev => prev + 1);
         setCurrentStoryIndex(0);
@@ -38,7 +38,7 @@ function App() {
     if (currentStoryIndex > 0) {
       setCurrentStoryIndex(prev => prev - 1);
     } else {
-      // Move to previous user's last story
+
       if (currentUserIndex > 0) {
         const prevUserIndex = currentUserIndex - 1;
         setCurrentUserIndex(prevUserIndex);
@@ -53,13 +53,13 @@ function App() {
 
   return (
     <div className="min-h-screen bg-black">
-      {/* Stories List */}
+
       <StoriesList
         stories={stories}
         onStoryClick={openStoryViewer}
       />
 
-      {/* Placeholder Content */}
+
       <div className="p-6 text-center">
         <h2 className="text-white text-xl font-bold mb-4">Instagram Stories Demo</h2>
         <p className="text-gray-400 text-sm">
@@ -69,7 +69,7 @@ function App() {
         </p>
       </div>
 
-      {/* Story Viewer */}
+
       {isViewerOpen && (
         <StoryViewer
           currentUserIndex={currentUserIndex}
