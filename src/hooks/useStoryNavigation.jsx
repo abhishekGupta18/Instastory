@@ -9,7 +9,7 @@ const useStoryNavigation = (stories, onClose) => {
         if (currentStoryIndex < currentUser.stories.length - 1) {
             setCurrentStoryIndex(prev => prev + 1);
         } else {
-            // Move to next user's first story
+
             if (currentUserIndex < stories.length - 1) {
                 setCurrentUserIndex(prev => prev + 1);
                 setCurrentStoryIndex(0);
@@ -23,7 +23,7 @@ const useStoryNavigation = (stories, onClose) => {
         if (currentStoryIndex > 0) {
             setCurrentStoryIndex(prev => prev - 1);
         } else {
-            // Move to previous user's last story
+
             if (currentUserIndex > 0) {
                 const prevUserIndex = currentUserIndex - 1;
                 setCurrentUserIndex(prevUserIndex);

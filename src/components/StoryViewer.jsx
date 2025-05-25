@@ -70,7 +70,7 @@ const StoryViewer = ({
 
     return (
         <div className="fixed inset-0 bg-black z-50 flex flex-col slide-up">
-            {/* Progress Bars */}
+
             <div className="flex gap-1 p-4 pb-3">
                 {currentUser.stories.map((_, index) => (
                     <ProgressBar
@@ -81,7 +81,7 @@ const StoryViewer = ({
                 ))}
             </div>
 
-            {/* Header */}
+
             <div className="flex items-center px-4 pb-4">
                 <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mr-3">
                     <span className="text-white font-bold text-xs">
@@ -100,7 +100,7 @@ const StoryViewer = ({
                 </button>
             </div>
 
-            {/* Story Content */}
+
             <div className="flex-1 relative flex items-center justify-center">
                 {isLoading && (
                     <div className="absolute inset-0 flex items-center justify-center">
@@ -128,7 +128,7 @@ const StoryViewer = ({
                     />
                 )}
 
-                {/* Navigation Areas */}
+
                 <div
                     className="absolute left-0 top-0 bottom-0 w-1/2 cursor-pointer"
                     onClick={() => handleNavClick('prev')}
