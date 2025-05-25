@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const StoryItem = ({ user, onClick }) => {
     const [imgError, setImgError] = useState(false);
